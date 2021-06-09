@@ -31,20 +31,30 @@ header h1 {
 
 /* メイン */
 main {
-  width: 400px;
   margin: 0 auto;
 }
 
+.main {
+  text-align: center;
+}
+
 #main {
-  width: 400px;
+  width: 360px;
   height: 250px;
+  padding: 0;
+  text-align: center;
+}
+
+nav {
+  width: 360px;
+  margin: 0 auto;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin: 20px 50px;
+  margin: 20px 30px;
   padding: 0;
 }
 
@@ -115,7 +125,7 @@ footer p {
 /* ジャバスクリプト用クラス */
 
 /* メディアクエリ */
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   body {
     display: grid;
     grid-template:
