@@ -1,0 +1,142 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  font-family: verdana, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+/* ヘッダー */
+header {
+  height: 100px;
+  line-height: 100px;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+}
+
+/* メイン */
+main {
+  width: 400px;
+  margin: 0 auto;
+}
+
+#main {
+  width: 400px;
+  height: 250px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 50px;
+  padding: 0;
+}
+
+nav li {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  background: rgb(139, 139, 139);
+  border-radius: 10px;
+  padding: 4px;
+  border: 1px solid rgb(0, 0, 0);
+  user-select: none;
+}
+
+nav li:hover {
+  background: rgb(100, 100, 100);
+}
+
+#play {
+  width: 100px;
+  text-align: center;
+}
+
+#prev, #next {
+  width: 50px;
+  text-align: center;
+}
+
+.thumbnails {
+  list-style: none;
+  padding: 0;
+  width: 265px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 45px);
+  gap: 10px;
+}
+
+.thumbnails li {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.thumbnails li:hover, .thumbnails li.current {
+  opacity: 1;
+}
+
+.thumbnails img {
+  width: 45px;
+  height: 38px;
+  margin: 2px 2px;
+}
+
+/* フッター */
+footer {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+footer p {
+  text-align: center;
+  margin: 0;
+}
+
+/* ジャバスクリプト用クラス */
+
+/* メディアクエリ */
+@media (min-width: 800px) {
+  body {
+    display: grid;
+    grid-template:
+    "h" 100px
+    "m" 1fr
+    "f" 50px;
+  }
+
+  /* ヘッダー */
+  header {
+    grid-area: h;
+  }
+
+  /* メイン */
+  main {
+    grid-area: m;
+  }
+
+  /* フッター */
+  footer {
+    grid-area: f;
+  }
+
+}
